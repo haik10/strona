@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-        <style>
+            <style>
         h1{
         color:green;
         text-align: center;
@@ -22,18 +22,18 @@
 
     </style>
     <meta charset="UTF-8">
-    <title>Pieski</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Title</title>
 </head>
 <body>
-  <h1> Wiecej szczegolow dla hodowli</h1>
+  <h1> Informacje o psach</h1>
     <table>
         <thead>
         <tr>
-            <th>Informacje o hodowli</th>
-            <th>Nazwa</th>
-            <th>Rok zalozenia</th>
-            <th>Panstwo</th>
+            <th>Rasa</th>
+            <th>Waga</th>
+            <th>Wzrost</th>
+            <th>Hodowla</th>
+            <th>Numer FCI</th>
         </tr>
         </thead>
         <tbody>
@@ -43,10 +43,10 @@
             <td>{{row[2]}}</td>
             <td>{{row[3]}}</td>
             <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
         </tr>
         {%endfor%}
         </tbody>
     </table>
-
 </body>
 </html>

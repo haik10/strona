@@ -20,5 +20,12 @@ def hodowle():
     return render_template("hodowle.html", data=value)
 
 
+@app.route("/rasypsow")
+def rasypsow():
+    cursor.execute('SELECT * FROM `rasy psow`')
+    value = cursor.fetchall()
+    return render_template("rasypsow.html", data=value)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
