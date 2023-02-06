@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+
     <style>
         h1{
         color:green;
         text-align: center;
         }
         button {
-            background-color: brown;
+            background-color: aqua;
             width: 250px;
-            color: white;
+            color: black;
             padding: 15px;
             text-align: center;
             margin: 10px;
@@ -22,17 +23,26 @@
 
     </style>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Strona główna</title>
 </head>
-<body>
+<body style ="background-image: url({{ url_for('static', filename='back1.png') }})">
 <button onclick="window.location.href='/hodowle'">
 Hodowle</button>
 <button type="button" onclick="window.location.href='rasypsow'">
   Rasy psów
 </button>
-<button type="button" onclick="window.location.href='championy'">
+<button type="button" onclick="window.location.href='champ'">
   Championy
 </button>
+<button type="button" onclick="window.location.href='dodr'">
+  Dodaj Psa
+</button>
 
-</body>
+
+
+
+<center>
+<img src="{{ url_for('static', filename='piezzki.jpg')}}"/>
+</center>
+    </body>
 </html>

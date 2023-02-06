@@ -3,7 +3,7 @@
 <head>
         <style>
         h1{
-        color:green;
+        color:black;
         text-align: center;
         }
             table {
@@ -19,21 +19,24 @@
           }
      tr:nth-child(even) {
         background-color: #c0c0c0;}
-
+background-image: url({{ url_for('static', filename='back1.png') }})
     </style>
     <meta charset="UTF-8">
-    <title>Pieski</title>
+    <title>Hodowle</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body>
-  <h1> Wiecej szczegolow dla hodowli</h1>
-    <table>
+
+<body style="background-color: powderblue">
+  <h1> HODOWLE</h1>
+   <img src="{{ url_for('static', filename='3.png')}}" height ='850' width='600' style="float:  left" />
+    <img src="{{ url_for('static', filename='4.png')}}" height ='850' width='400' style="float:  right" />
+  <table>
         <thead>
         <tr>
-            <th>Informacje o hodowli</th>
-            <th>Nazwa</th>
-            <th>Rok zalozenia</th>
-            <th>Panstwo</th>
+            <th>Nazwa hodowli</th>
+            <th>Rok założenia</th>
+            <th>Państwo</th>
+
         </tr>
         </thead>
         <tbody>
@@ -42,11 +45,12 @@
             <td>{{row[1]}}</td>
             <td>{{row[2]}}</td>
             <td>{{row[3]}}</td>
-            <td>{{row[4]}}</td>
+
         </tr>
         {%endfor%}
         </tbody>
     </table>
 
+<from class=""f
 </body>
 </html>

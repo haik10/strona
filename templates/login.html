@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Panel logowania</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body style= "background-color: gold">
+
+    <div class="container">
+      <h1>Logowanie</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Nazwa użytkownika" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Hasło" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Zaloguj się">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+
+<center>
+<img src="{{ url_for('static', filename='piesio.png')}}"height ='1000' width='800' style="float: center" />
+</center>
+  </body>
+</html>
